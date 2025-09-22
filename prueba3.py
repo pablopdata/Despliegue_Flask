@@ -1,7 +1,8 @@
 from flask import Flask, render_template, send_file
+import matplotlib
+matplotlib.use('Agg')  # Backend compatible con servidores sin entorno gráfico
 import matplotlib.pyplot as plt
 import io
-
 app = Flask(__name__)
 
 @app.route('/')
